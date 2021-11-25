@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <style>
+  :root {
+    --penguin-size: 300px;
+    --penguin-skin: black;
+    --penguin-belly: white;
+    --penguin-beak: orange;
+  }
+
+  @media (max-width: 350px) {
+    :root {
+      /* Only change code below this line */
+
+      /* Only change code above this line */
+    }
+  }
+
+  .penguin {
+    position: relative;
+    margin: auto;
+    display: block;
+    margin-top: 5%;
+    width: var(--penguin-size, 300px);
+    height: var(--penguin-size, 300px);
+  }
+
+  .right-cheek {
+    top: 15%;
+    left: 35%;
+    background: var(--penguin-belly, white);
+    width: 60%;
+    height: 70%;
+    border-radius: 70% 70% 60% 60%;
+  }
+
+  .left-cheek {
+    top: 15%;
+    left: 5%;
+    background: var(--penguin-belly, white);
+    width: 60%;
+    height: 70%;
+    border-radius: 70% 70% 60% 60%;
+  }
+
+  .belly {
+    top: 60%;
+    left: 2.5%;
+    background: var(--penguin-belly, white);
+    width: 95%;
+    height: 100%;
+    border-radius: 120% 120% 100% 100%;
+  }
+
+  .penguin-top {
+    top: 10%;
+    left: 25%;
+    background: var(--penguin-skin, gray);
+    width: 50%;
+    height: 45%;
+    border-radius: 70% 70% 60% 60%;
+  }
+
+  .penguin-bottom {
+    top: 40%;
+    left: 23.5%;
+    background: var(--penguin-skin, gray);
+    width: 53%;
+    height: 45%;
+    border-radius: 70% 70% 100% 100%;
+  }
+
+  .right-hand {
+    top: 5%;
+    left: 25%;
+    background: var(--penguin-skin, black);
+    width: 30%;
+    height: 60%;
+    border-radius: 30% 30% 120% 30%;
+    transform: rotate(130deg);
+    z-index: -1;
+    animation-duration: 6s;
+    animation-name: wave;
+    animation-iteration-count: infinite;
+    transform-origin:0% 0%;
+    animation-timing-function: linear;
+  }
+
+  @keyframes wave {
+      10% {
+        transform: rotate(110deg);
+      }
+      20% {
+        transform: rotate(130deg);
+      }
+      30% {
+        transform: rotate(110deg);
+      }
+      40% {
+        transform: rotate(130deg);
+      }
+    }
+
+  .left-hand {
+    top: 0%;
+    left: 75%;
+    background: var(--penguin-skin, gray);
+    width: 30%;
+    height: 60%;
+    border-radius: 30% 30% 30% 120%;
+    transform: rotate(-45deg);
+    z-index: -1;
+  }
+
+  .right-feet {
+    top: 85%;
+    left: 60%;
+    background: var(--penguin-beak, orange);
+    width: 15%;
+    height: 30%;
+    border-radius: 50% 50% 50% 50%;
+    transform: rotate(-80deg);
+    z-index: -2222;
+  }
+
+  .left-feet {
+    top: 85%;
+    left: 25%;
+    background: var(--penguin-beak, orange);
+    width: 15%;
+    height: 30%;
+    border-radius: 50% 50% 50% 50%;
+    transform: rotate(80deg);
+    z-index: -2222;
+  }
+
+  .right-eye {
+    top: 45%;
+    left: 60%;
+    background: black;
+    width: 15%;
+    height: 17%;
+    border-radius: 50%;
+  }
+
+  .left-eye {
+    top: 45%;
+    left: 25%;
+    background: black;
+    width: 15%;
+    height: 17%;
+    border-radius: 50%;
+  }
+
+  .sparkle {
+    top: 25%;
+    left:-23%;
+    background: white;
+    width: 150%;
+    height: 100%;
+    border-radius: 50%;
+  }
+
+  .blush-right {
+    top: 65%;
+    left: 15%;
+    background: pink;
+    width: 15%;
+    height: 10%;
+    border-radius: 50%;
+  }
+
+  .blush-left {
+    top: 65%;
+    left: 70%;
+    background: pink;
+    width: 15%;
+    height: 10%;
+    border-radius: 50%;
+  }
+
+  .beak-top {
+    top: 60%;
+    left: 40%;
+    background: var(--penguin-beak, orange);
+    width: 20%;
+    height: 10%;
+    border-radius: 50%;
+  }
+
+  .beak-bottom {
+    top: 65%;
+    left: 42%;
+    background: var(--penguin-beak, orange);
+    width: 16%;
+    height: 10%;
+    border-radius: 50%;
+  }
+
+
+  .penguin * {
+    position: absolute;
+  }
+h1 {
+ text-align: center;
+ color: black;
+}
+body {
+            background-color: #14BDD7;
+            margin: 10%;
+        }
+  p {
+font-size: 20px;
+}
+ 
+ .box-container {
+ color: #4C044C;
+  background-color: rgb(46, 139, 87, 0.25);
+            box-shadow: 20px 20px 20px #99FB99;
+            font-family: Georgia;
+            padding: 25px 25px;
+            margin: 11px;
+            margin-top: 50px; }
+
+ .video-float {
+ float: center;
+}
+
+</style>
+<div class="penguin">
+  <div class="penguin-bottom">
+    <div class="right-hand"></div>
+    <div class="left-hand"></div>
+    <div class="right-feet"></div>
+    <div class="left-feet"></div>
+  </div>
+  <div class="penguin-top">
+    <div class="right-cheek"></div>
+    <div class="left-cheek"></div>
+    <div class="belly"></div>
+    <div class="right-eye">
+      <div class="sparkle"></div>
+    </div>
+    <div class="left-eye">
+      <div class="sparkle"></div>
+    </div>
+    <div class="blush-right"></div>
+    <div class="blush-left"></div>
+    <div class="beak-top"></div>
+    <div class="beak-bottom"></div>
+  </div>
+</div>
+  <title>Your Lovely Friend!</title>
+       <h1>Hello My Lovely Visitors!</h1>
+<hr>
+<br>
+  <p color: #59074B><strong>Do you like the way I wave in this webpage? I will be very happy if you go down this page and give a little time in telling me how cute I look and if you want me to diy my skin color, so that when you visit next time, you find me more cute!<strong></p>
+<p color: #59074B><strong>I will highlight my friend here who have created me in this way for you all. It might look very intimidating but my creation was not easy :)<strong></p>
+<br><br>
+<div class="box-container">
+<p><strong>Here is the code which literally made everything on the tab you are viewing me!<strong></p>
+<div class="video-float">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/BNhrlYMbLgg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+<div id="text-float">
+<p>Click on the <strong>PLAY<strong> button to view but you can always skip this if you don't like to get spoiled with details</p>
+</div>
+</div>
+
+<br>
+
+<section>
+    <form action="">
+
+
+      <p tabindex="0">Instructions: Fill in ALL the information then click <b>Submit</b></p>
+
+
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username" important><br>
+      
+
+      <!-- Only change code below this line -->
+      <fieldset>
+        <legend color="red">What do you like about me the most?</legend>
+        <input id="looks" type="radio" name="likes" value="looks">
+        <label for="looks">How cute I look</label><br>
+        <input id="friendly" type="radio" name="likes" value="friendly">
+        <label for="friendly">My friendly nature</label><br>
+        <input id="wave" type="radio" name="likes" value="wave">
+        <label for="master">My waving style</label>
+      </fieldset>
+      <br>
+      <fieldset>
+      <legend>Select your favorite color:</legend>
+      <input id="green" type="checkbox" name="colors" value="green">
+      <label for="green">Shades of green</label><br>
+      <input id="pink" type="checkbox" name="colors" value="pink">
+      <label for="pink">Shades of pink</label><br>
+      <input id="blue" type="checkbox" name="colors" value="blue">
+      <label for="blue">Shades of blue</label><br>
+      <input id="others" type="checkbox" name="colors" value="others">
+      <label for="others">I want my own choice (You can add a comment :))</label>
+      </fieldset>
+<br>
+<p><strong>Want to add something? Comment down!<strong>
+<br><br>
+<textarea name="comments" id="comments" style="font-family:sans-serif;font-size:1.2em;">Add here!
+</textarea>
+<br>
+<p>Sign up to receive waving penguin's blog posts by email here!</p>
+      <label for="email">Email:</label>
+      <input type="text" id="email" name="email">
+
+      <br><br>
+      <input type="submit" name="submit" value="Submit">
+    </form><br>
+  </section>
+<br><br><br><hr><hr>
+  <footer>&copy; 2020 Suprabha Dey</footer>
+</html>
